@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mighty:bombardilo_crocodilo",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/bombardilo_crocodilo"
+            },
+            "geometry": {
+                "default": "geometry.bombardilo_crocodilo"
+            },
+            "render_controllers": [
+                "controller.render.mighty_mobs"
+            ],
+            "animations": {
+                "idle": "animation.bombardilo_crocodilo.idle",
+                "fly": "animation.bombardilo_crocodilo.fly",
+                "controller": "controller.animation.bombardilo_crocodilo"
+            },
+            "scripts": {
+                "animate": ["controller"]
+            },
+            "spawn_egg": {
+                "base_color": "#2E7D32",
+                "overlay_color": "#FF6F00"
+            }
+        }
+    }
+}

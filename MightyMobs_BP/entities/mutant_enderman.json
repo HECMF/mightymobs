@@ -1,0 +1,100 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mighty:mutant_enderman",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["mutant_enderman", "enderman", "mighty_mob", "mob"]
+            },
+            "minecraft:health": {
+                "value": 80,
+                "max": 80
+            },
+            "minecraft:attack": {
+                "damage": 12
+            },
+            "minecraft:movement": {
+                "value": 0.3
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {
+                "can_pass_doors": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:collision_box": {
+                "width": 0.9,
+                "height": 4.2
+            },
+            "minecraft:scale": {
+                "value": 1.5
+            },
+            "minecraft:teleport": {
+                "dark_teleport_chance": 0.05,
+                "light_teleport_chance": 0.05,
+                "min_random_teleport_time": 5,
+                "max_random_teleport_time": 15,
+                "random_teleport_cube": [32, 16, 32],
+                "target_distance": 16,
+                "target_teleport_chance": 0.5
+            },
+            "minecraft:knockback_resistance": {
+                "value": 0.3
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/mutant_enderman.json"
+            },
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 20 : 0"
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "within_radius": 20.0,
+                "reselect_targets": true,
+                "must_see": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        "max_dist": 20
+                    }
+                ]
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 3,
+                "speed_multiplier": 1.5,
+                "track_target": true
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 8.0
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 8
+            }
+        }
+    }
+}

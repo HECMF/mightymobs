@@ -1,0 +1,33 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mighty:mutant_zombie",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mutant_zombie"
+            },
+            "geometry": {
+                "default": "geometry.mutant_zombie"
+            },
+            "render_controllers": [
+                "controller.render.mighty_mobs"
+            ],
+            "animations": {
+                "idle": "animation.mutant_zombie.idle",
+                "walk": "animation.mutant_zombie.walk",
+                "attack": "animation.mutant_zombie.attack",
+                "controller": "controller.animation.mutant_zombie"
+            },
+            "scripts": {
+                "animate": ["controller"]
+            },
+            "spawn_egg": {
+                "base_color": "#2E8B57",
+                "overlay_color": "#4A6741"
+            }
+        }
+    }
+}

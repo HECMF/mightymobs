@@ -1,0 +1,33 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mighty:mutant_enderman",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mutant_enderman"
+            },
+            "geometry": {
+                "default": "geometry.mutant_enderman"
+            },
+            "render_controllers": [
+                "controller.render.mighty_mobs"
+            ],
+            "animations": {
+                "idle": "animation.mutant_enderman.idle",
+                "walk": "animation.mutant_enderman.walk",
+                "attack": "animation.mutant_enderman.attack",
+                "controller": "controller.animation.mutant_enderman"
+            },
+            "scripts": {
+                "animate": ["controller"]
+            },
+            "spawn_egg": {
+                "base_color": "#161616",
+                "overlay_color": "#CC00FA"
+            }
+        }
+    }
+}

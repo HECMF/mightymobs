@@ -1,0 +1,134 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.bombardilo_crocodilo",
+                "texture_width": 128,
+                "texture_height": 64,
+                "visible_bounds_width": 4,
+                "visible_bounds_height": 3,
+                "visible_bounds_offset": [0, 1.0, 0]
+            },
+            "bones": [
+                {
+                    "name": "root",
+                    "pivot": [0, 0, 0]
+                },
+                {
+                    "name": "body",
+                    "parent": "root",
+                    "pivot": [0, 8, 0],
+                    "cubes": [
+                        {
+                            "origin": [-6, 5, -10],
+                            "size": [12, 7, 20],
+                            "uv": [0, 0]
+                        }
+                    ]
+                },
+                {
+                    "name": "head",
+                    "parent": "body",
+                    "pivot": [0, 9, -10],
+                    "cubes": [
+                        {
+                            "origin": [-4, 7, -18],
+                            "size": [8, 5, 8],
+                            "uv": [0, 27]
+                        },
+                        {
+                            "origin": [-3, 6, -24],
+                            "size": [6, 3, 6],
+                            "uv": [0, 40]
+                        }
+                    ]
+                },
+                {
+                    "name": "left_wing",
+                    "parent": "body",
+                    "pivot": [6, 11, 0],
+                    "cubes": [
+                        {
+                            "origin": [6, 10, -6],
+                            "size": [16, 1, 10],
+                            "uv": [44, 0]
+                        }
+                    ]
+                },
+                {
+                    "name": "right_wing",
+                    "parent": "body",
+                    "pivot": [-6, 11, 0],
+                    "cubes": [
+                        {
+                            "origin": [-22, 10, -6],
+                            "size": [16, 1, 10],
+                            "uv": [44, 11]
+                        }
+                    ]
+                },
+                {
+                    "name": "left_front_leg",
+                    "parent": "body",
+                    "pivot": [5, 5, -7],
+                    "cubes": [
+                        {
+                            "origin": [3, 0, -9],
+                            "size": [4, 5, 4],
+                            "uv": [64, 0]
+                        }
+                    ]
+                },
+                {
+                    "name": "right_front_leg",
+                    "parent": "body",
+                    "pivot": [-5, 5, -7],
+                    "cubes": [
+                        {
+                            "origin": [-7, 0, -9],
+                            "size": [4, 5, 4],
+                            "uv": [64, 9]
+                        }
+                    ]
+                },
+                {
+                    "name": "left_back_leg",
+                    "parent": "body",
+                    "pivot": [5, 5, 7],
+                    "cubes": [
+                        {
+                            "origin": [3, 0, 5],
+                            "size": [4, 5, 4],
+                            "uv": [80, 0]
+                        }
+                    ]
+                },
+                {
+                    "name": "right_back_leg",
+                    "parent": "body",
+                    "pivot": [-5, 5, 7],
+                    "cubes": [
+                        {
+                            "origin": [-7, 0, 5],
+                            "size": [4, 5, 4],
+                            "uv": [80, 9]
+                        }
+                    ]
+                },
+                {
+                    "name": "tail",
+                    "parent": "body",
+                    "pivot": [0, 7, 10],
+                    "cubes": [
+                        {
+                            "origin": [-2, 6, 10],
+                            "size": [4, 3, 12],
+                            "uv": [32, 27]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

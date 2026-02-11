@@ -2,3 +2,15 @@
 
 pack.name=Mighty Mobs Resource Pack
 pack.description=Resource Pack for Mighty Mobs - custom models, textures, sounds and animations
+
+## Entity Names
+entity.mighty:bombardilo_crocodilo.name=Bombardilo Crocodilo
+entity.mighty:mutant_skeleton.name=Mutant Skeleton
+entity.mighty:mutant_zombie.name=Mutant Zombie
+entity.mighty:mutant_enderman.name=Mutant Enderman
+
+## Spawn Eggs
+item.spawn_egg.entity.mighty:bombardilo_crocodilo.name=Spawn Bombardilo Crocodilo
+item.spawn_egg.entity.mighty:mutant_skeleton.name=Spawn Mutant Skeleton
+item.spawn_egg.entity.mighty:mutant_zombie.name=Spawn Mutant Zombie
+item.spawn_egg.entity.mighty:mutant_enderman.name=Spawn Mutant Enderman
