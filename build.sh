@@ -21,6 +21,23 @@ mkdir -p "$BUILD_DIR"
 
 echo "=== Building $ADDON_NAME.mcaddon ==="
 
+# Increment patch version in both manifests
+BP_MANIFEST="$BP_DIR/manifest.json"
+RP_MANIFEST="$RP_DIR/manifest.json"
+
+CURRENT_VERSION=$(grep -m1 '"version"' "$BP_MANIFEST" | sed 's/.*\[\s*\([0-9]*\),\s*\([0-9]*\),\s*\([0-9]*\)\s*\].*/\1.\2.\3/')
+MAJOR=$(echo "$CURRENT_VERSION" | cut -d. -f1)
+MINOR=$(echo "$CURRENT_VERSION" | cut -d. -f2)
+PATCH=$(echo "$CURRENT_VERSION" | cut -d. -f3)
+
+NEW_PATCH=$((PATCH + 1))
+echo "Version: $MAJOR.$MINOR.$PATCH -> $MAJOR.$MINOR.$NEW_PATCH"
+
+sed -i "s/\"version\": \[$MAJOR, $MINOR, $PATCH\]/\"version\": [$MAJOR, $MINOR, $NEW_PATCH]/g" "$BP_MANIFEST" "$RP_MANIFEST"
+
+# Update version in pack descriptions
+sed -i "s/Mighty Mobs v$MAJOR\.$MINOR\.$PATCH/Mighty Mobs v$MAJOR.$MINOR.$NEW_PATCH/g" "$BP_MANIFEST" "$RP_MANIFEST"
+
 # Package Behavior Pack
 echo "Packaging Behavior Pack..."
 (cd "$BP_DIR" && zip -r "$BUILD_DIR/${ADDON_NAME}_BP.mcpack" . -x ".*")

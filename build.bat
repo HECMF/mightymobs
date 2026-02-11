@@ -22,6 +22,14 @@ mkdir "%BUILD_DIR%"
 
 echo === Building %ADDON_NAME%.mcaddon ===
 
+REM Increment patch version in both manifests
+echo Incrementing version...
+powershell -NoProfile -ExecutionPolicy Bypass -File "%SCRIPT_DIR%bump_version.ps1" -BPDir "%BP_DIR%" -RPDir "%RP_DIR%"
+if errorlevel 1 (
+    echo ERROR: Failed to increment version
+    exit /b 1
+)
+
 REM Package Behavior Pack
 echo Packaging Behavior Pack...
 powershell -NoProfile -Command "Compress-Archive -Path '%BP_DIR%\*' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%_BP.mcpack' -Force"
@@ -50,5 +58,6 @@ echo.
 echo === Build complete ===
 echo Output: %BUILD_DIR%\%ADDON_NAME%.mcaddon
 dir "%BUILD_DIR%\%ADDON_NAME%.mcaddon"
+
 
 endlocal
