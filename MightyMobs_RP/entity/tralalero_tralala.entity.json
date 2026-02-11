@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mighty:tralalero_tralala",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/tralalero_tralala"
+            },
+            "geometry": {
+                "default": "geometry.tralalero_tralala"
+            },
+            "render_controllers": [
+                "controller.render.mighty_mobs"
+            ],
+            "animations": {
+                "walk": "animation.tralalero_tralala.walk",
+                "idle": "animation.tralalero_tralala.idle",
+                "attack": "animation.tralalero_tralala.attack",
+                "dance": "animation.tralalero_tralala.dance"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "walk": "query.is_moving"
+                    },
+                    {
+                        "idle": "!query.is_moving && !query.is_delayed_attacking"
+                    },
+                    {
+                        "attack": "query.is_delayed_attacking"
+                    },
+                    {
+                        "dance": "!query.is_moving && !query.is_delayed_attacking && query.is_in_water"
+                    }
+                ]
+            },
+            "spawn_egg": {
+                "base_color": "#1E90FF",
+                "overlay_color": "#003366"
+            }
+        }
+    }
+}

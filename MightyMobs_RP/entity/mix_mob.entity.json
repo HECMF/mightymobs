@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mighty:mix_mob",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mix_mob"
+            },
+            "geometry": {
+                "default": "geometry.mix_mob"
+            },
+            "render_controllers": [
+                "controller.render.mighty_mobs"
+            ],
+            "animations": {
+                "idle": "animation.mix_mob.idle",
+                "walk": "animation.mix_mob.walk",
+                "attack": "animation.mix_mob.attack",
+                "controller": "controller.animation.mix_mob"
+            },
+            "scripts": {
+                "animate": [
+                    "controller"
+                ]
+            },
+            "spawn_egg": {
+                "base_color": "#3B3B3B",
+                "overlay_color": "#8B4513"
+            }
+        }
+    }
+}
