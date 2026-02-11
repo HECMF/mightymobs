@@ -9,6 +9,7 @@
 - Dieser Mob soll wie der Brainrot Bombardilo Corocodilo aussehen
 - Man Soll zu zweit auf ihm fliegen können und ihn auch steuern können.
 - Er droppt TNT
+- Er kann fliegen
 - Als Angriff lässt er TNT fallen
 
 ### Mutanten Mob - Skelett
