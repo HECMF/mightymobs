@@ -10,10 +10,6 @@ entity.mighty:mutant_zombie.name=Mutant Zombie
 entity.mighty:mutant_enderman.name=Mutant Enderman
 entity.mighty:mix_mob.name=Mix Mob
 entity.mighty:tralalero_tralala.name=Tralalero Tralala
-entity.mighty:auto.name=Auto
-entity.mighty:flugzeug.name=Flugzeug
-entity.mighty:mech.name=Mech
-entity.mighty:boot.name=Boot
 
 ## Spawn Eggs
 item.spawn_egg.entity.mighty:bombardilo_crocodilo.name=Spawn Bombardilo Crocodilo
@@ -22,7 +18,3 @@ item.spawn_egg.entity.mighty:mutant_zombie.name=Spawn Mutant Zombie
 item.spawn_egg.entity.mighty:mutant_enderman.name=Spawn Mutant Enderman
 item.spawn_egg.entity.mighty:mix_mob.name=Spawn Mix Mob
 item.spawn_egg.entity.mighty:tralalero_tralala.name=Spawn Tralalero Tralala
-item.spawn_egg.entity.mighty:auto.name=Spawn Auto
-item.spawn_egg.entity.mighty:flugzeug.name=Spawn Flugzeug
-item.spawn_egg.entity.mighty:mech.name=Spawn Mech
-item.spawn_egg.entity.mighty:boot.name=Spawn Boot
