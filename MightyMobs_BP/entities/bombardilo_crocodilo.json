@@ -30,7 +30,7 @@
                 "can_path_over_water": true,
                 "can_path_over_lava": true,
                 "can_pass_doors": false,
-                "can_walk": true
+                "can_walk": false
             },
             "minecraft:damage_sensor": {
                 "triggers": [
@@ -40,6 +40,14 @@
                     },
                     {
                         "cause": "block_explosion",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "fire",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "fire_tick",
                         "deals_damage": false
                     }
                 ]
@@ -62,8 +70,9 @@
                     }
                 ]
             },
-            "minecraft:input_ground_controlled": {},
-            "minecraft:physics": {},
+            "minecraft:physics": {
+                "has_gravity": false
+            },
             "minecraft:pushable": {
                 "is_pushable": true,
                 "is_pushable_by_piston": true
@@ -115,11 +124,6 @@
                         "max_dist": 25
                     }
                 ]
-            },
-            "minecraft:behavior.melee_attack": {
-                "priority": 3,
-                "speed_multiplier": 1.2,
-                "track_target": true
             },
             "minecraft:behavior.random_fly": {
                 "priority": 5,

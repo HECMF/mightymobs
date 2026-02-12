@@ -32,7 +32,7 @@ if errorlevel 1 (
 
 REM Package Behavior Pack
 echo Packaging Behavior Pack...
-powershell -NoProfile -Command "Compress-Archive -Path '%BP_DIR%\*' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%_BP.mcpack' -Force"
+powershell -NoProfile -Command "Compress-Archive -Path '%BP_DIR%\*' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%_BP.zip' -Force; Rename-Item '%BUILD_DIR%\%ADDON_NAME%_BP.zip' '%ADDON_NAME%_BP.mcpack'"
 if errorlevel 1 (
     echo ERROR: Failed to package Behavior Pack
     exit /b 1
@@ -40,7 +40,7 @@ if errorlevel 1 (
 
 REM Package Resource Pack
 echo Packaging Resource Pack...
-powershell -NoProfile -Command "Compress-Archive -Path '%RP_DIR%\*' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%_RP.mcpack' -Force"
+powershell -NoProfile -Command "Compress-Archive -Path '%RP_DIR%\*' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%_RP.zip' -Force; Rename-Item '%BUILD_DIR%\%ADDON_NAME%_RP.zip' '%ADDON_NAME%_RP.mcpack'"
 if errorlevel 1 (
     echo ERROR: Failed to package Resource Pack
     exit /b 1
@@ -48,7 +48,7 @@ if errorlevel 1 (
 
 REM Combine into .mcaddon
 echo Creating .mcaddon...
-powershell -NoProfile -Command "Compress-Archive -Path '%BUILD_DIR%\%ADDON_NAME%_BP.mcpack','%BUILD_DIR%\%ADDON_NAME%_RP.mcpack' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%.mcaddon' -Force"
+powershell -NoProfile -Command "Compress-Archive -Path '%BUILD_DIR%\%ADDON_NAME%_BP.mcpack','%BUILD_DIR%\%ADDON_NAME%_RP.mcpack' -DestinationPath '%BUILD_DIR%\%ADDON_NAME%.zip' -Force; Rename-Item '%BUILD_DIR%\%ADDON_NAME%.zip' '%ADDON_NAME%.mcaddon'"
 if errorlevel 1 (
     echo ERROR: Failed to create .mcaddon
     exit /b 1
